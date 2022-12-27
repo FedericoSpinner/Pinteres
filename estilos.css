@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    flex-grow: wrap;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p{ /* config fuente que se uso */
+    font-weight: bold;
+}
+
+header{ /* configuracion basica cabecera pag */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    padding: 5px;
+}
+
+.Logo{ /* configuracion logo pinterest */
+    width: 100px;
+    margin: 0px 3px 5px -5px;
+    margin-left: -5px;
+}
+
+.buscador{ /* confi barra superior */
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    z-index: 1;
+}
+
+.tex{ /* config texto de barra superior */
+    margin: -1px 3px 5px 8px;
+    padding: 8px;
+}
+
+.tex:active{
+    scale: 0.9;
+}
+
+.tex:hover{
+    cursor: pointer;
+    background-color:rgb(197, 197, 197);
+    color: black;
+    border-radius: 15%;
+}
+
+.quess{ /* tamaño, color de la barra de busqueda */
+    margin: -1px 5px 5px 20px;
+    color: lightslategray;
+    background-color: white;
+    border-radius: 75px;
+    border-style:ridge;
+    align-items: center;
+    height: 47px;
+    width: 935px;
+    padding-left: 25px;
+}
+
+.icono{ /* botones de inicio sesion y registro */
+    font-weight: bold;
+    font-size: 15px;
+    margin: -1px 10px 5px 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(240, 240, 240);
+    border-radius: 50px;
+    border-style: none;
+    align-items: center;
+    height: 47px;
+    width: 125px;
+    
+}
+
+.icono:active{ /* Activar botones */
+    scale: 0.9;
+}
+
+.icono:hover{ /* Activar boton iniciar sesion */
+    cursor: pointer;
+    background-color:rgb(225, 226, 225);
+}
+
+.rojo{ /* segunda config para que boton sea rojo */
+    background-color: rgb(226, 0, 0);
+    color: white;
+    height: 47px;
+    width: 120px;
+}
+
+.rojo:hover{ /* activacion boton registro */
+    cursor: pointer;
+    background-color: rgb(155, 0, 0);
+}
+
+.grid{ /* configuracion general de las imagenes */
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(5, 215px);
+    grid-template-rows: repeat(15, 350px);
+    column-gap: 35px;
+    row-gap: 10px;
+    justify-content: center;
+    }
+
+.lar1{
+        grid-column: 3;
+        grid-row: 2/3;
+    }
+
+.imgt{ /* Tamaño de imagen */
+    width: 236px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 110px;
+}
+
+.imgt:hover{ /* activar imagenes */
+    cursor: pointer;
+    opacity: .3;
+}
+
+/* Configuracion para ajuste de pantalla */
+
+@media screen and (max-width: 1300px) { 
+    
+    header input{
+        width: 400px;
+    }
+ 
+    .grid{
+        grid-template-columns: repeat(4, 14em);
+     }
+
+}
+
+@media screen and (max-width: 900px) { 
+    
+    header input{
+        width: 300px;
+    }
+ 
+    .grid{
+        grid-template-columns: repeat(3, 14em);
+     }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    header input{
+        width: 100px;
+    }
+
+    .grid{
+        grid-template-columns: repeat(2, 14em);
+     }
+
+   
+}
